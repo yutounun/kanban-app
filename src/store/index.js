@@ -5,7 +5,19 @@ import actions from './actions'
 import getters from './getters'
 import mutations from './mutations'
 
+const states = {
+  auth: {
+    token: null,
+    useId: null
+  },
+  board: {
+    list: []
+  }
+}
+
 export default new Vuex.Store({
+  // states: {}のように書かなくていい。それぞれのファイルでその形になっている
+  states,
   getters,
   actions,
   mutations,
